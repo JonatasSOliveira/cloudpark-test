@@ -1,24 +1,13 @@
-import React from "react";
-import {
-  TextInput,
-  TextInputProps,
-  Text,
-  View,
-  Platform,
-} from "react-native";
-import { input } from "./variants";
+import React from 'react';
+import { TextInput, TextInputProps, Text, View } from 'react-native';
+import { input } from './variants';
 
 type InputProps = TextInputProps & {
   label?: string;
   errorMessage?: string;
 };
 
-export const Input: React.FC<InputProps> = ({
-  label,
-  errorMessage,
-  editable = true,
-  ...rest
-}) => {
+export const Input: React.FC<InputProps> = ({ label, errorMessage, editable = true, ...rest }) => {
   const hasError = !!errorMessage;
   const disabled = !editable;
 

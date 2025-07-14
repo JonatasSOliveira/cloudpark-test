@@ -1,20 +1,33 @@
 {
   "expo": {
-    "name": "my-expo-app",
-    "slug": "my-expo-app",
+    "name": "cloudpark-test",
+    "slug": "cloudpark-test",
+    "scheme": "cloudpark-test",
     "version": "1.0.0",
+    "extra": {
+      "oneSignalAppId": "",
+      "authEmail": "teste@cloudpark.com.br",
+      "authPassword": "123456"
+    },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./src/assets/favicon.png"
     },
     "experiments": {
       "tsconfigPaths": true
     },
-    "plugins": [],
+    "plugins": [
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "development"
+        }
+      ]
+    ],
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./src/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -22,14 +35,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dev.jonatas.oliveira.cloudparktest", 
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"] 
+      },
+      "entitlements": {
+        "aps-environment": "development", 
+        "com.apple.security.application-groups": [
+          "group.${ios.bundleIdentifier}.onesignal" 
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.dev.jonatas.oliveira.myexpoapp"
+      "package": "com.dev.jonatas.oliveira.cloudparktest"
     }
   }
 }

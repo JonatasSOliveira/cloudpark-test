@@ -1,10 +1,10 @@
-import { TicketStatus } from "./TicketStatus.enum"
+import { TicketStatus } from './TicketStatus.enum';
 
 export interface TicketCreateResponseDTO {
-  id: string
-  title: string
-  description: string
-  status: TicketStatus
-  createdAt: string
-  categoryName: string
+  id: string;
+  title: string;
+  description: string;
+  status: TicketStatus;
+  createdAt: string;
+  categoryName: string;
 }

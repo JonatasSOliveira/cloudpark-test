@@ -3,13 +3,15 @@
   "compilerOptions": {
     "strict": true,
     "jsx": "react-jsx",
-
     "baseUrl": "./src",
     "paths": {
       "@/domain/*": ["./domain/*"],
       "@/shared/*": ["./shared/*"],
       "@/adapters/*": ["./adapters/*"],
       "@/presentation/*": ["./presentation/*"],
+      "@/application/*": ["./application/*"],
+      "@/ports/*": ["./ports/*"],
+      "@/assets/*": ["./assets/*"]
     }
   }
 }

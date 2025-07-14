@@ -1,6 +1,5 @@
-
 export interface TicketCreateRequestDTO {
-  title: string
-  description: string
-  categoryId: string
+  title: string;
+  description: string;
+  categoryId: string;
 }

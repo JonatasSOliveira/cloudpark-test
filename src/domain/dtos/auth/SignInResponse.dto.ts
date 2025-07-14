@@ -1,4 +1,4 @@
 export interface SignInResponseDTO {
-  token: string
-  name: string
+  token: string;
+  name: string;
 }
